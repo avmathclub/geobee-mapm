@@ -1,0 +1,14 @@
+engine: pdflatex
+texfiles:
+  problems.tex: geobee-{year}.pdf
+  solutions.tex: geobee-{year}-sols.pdf
+problem_count: 10
+vars:
+  - year
+problemvars:
+  - problem
+  - author
+  - answer
+solutionvars:
+  - text
+  - author

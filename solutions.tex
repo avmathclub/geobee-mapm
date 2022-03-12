@@ -1,0 +1,33 @@
+\documentclass{scrartcl}
+\usepackage{mapm}
+\usepackage{amsmath, amssymb}
+\usepackage{asymptote}
+\usepackage{tikz}
+
+\title{Geometry Bee Solutions}
+\author{Amador Valley}
+\date{\mapmvar{year}}
+
+\begin{document}
+
+\maketitle
+
+\section{Answers}
+
+\begin{enumerate}
+	\foreach \n in {1, ..., 10} {
+		\item \probvar{\n}{answer} (\probvar{\n}{author})
+	}
+\end{enumerate}
+
+\section{Solutions}
+
+\begin{enumerate}
+	\foreach \n in {1, ..., 10} {
+		\item \probvar{\n}{problem}
+
+		\emph{Solution, by \solvar{\n}{1}{author}}: \solvar{\n}{1}{text} % I doubt there's going to be more than one solution to a problem
+	}
+\end{enumerate}
+
+\end{document}
