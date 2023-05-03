@@ -5,6 +5,8 @@
 \usepackage{tikz}
 \usepackage[letterpaper, margin=1in]{geometry}
 
+\newenvironment{content}{\vskip -2mm\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}}{}
+
 \title{Geometry Bee Solutions}
 \author{Amador Valley}
 \date{\mapmvar{year}}
@@ -23,12 +25,24 @@
 
 \section{Solutions}
 
-\begin{enumerate}
-	\foreach \n in {1, ..., 10} {
-		\item \probvar{\n}{problem}
+\foreach \n in {1,...,10} {
+  \part{Problem \n}
 
-		\emph{Solution, by \solvar{\n}{1}{author}}: \solvar{\n}{1}{text} % I doubt there's going to be more than one solution to a problem
-	}
-\end{enumerate}
+  \section{Problem}
+
+  \begin{content}
+    \probvar{\n}{problem}
+  \end{content}
+
+	\ifnum\solcount{\n}>0\relax
+	  \foreach \i in {1,...,\solcount{\n}} {
+	    \subsection{Solution (\solvar{\n}{\i}{author})}
+	    
+	    \begin{content}
+	      \solvar{\n}{\i}{text}
+	    \end{content}
+	  }
+	\fi
+}
 
 \end{document}
